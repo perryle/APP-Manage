@@ -9,21 +9,22 @@ import java.io.Serializable;
 import java.util.Date;
 public class App implements Serializable {
 	private static final long serialVersionUID = 1L;
-	private Integer appId;
-	private String appName;
-	private Developer developer;
-	private Version category;
-	private String appInfo;
-	private Integer flatform;
-	private Integer statusId;
-	private Integer saleId;
-	private Integer checker;
-	private Date createDate;
-	private Date updatedaDate;
-	public Integer getAppId() {
+	private Long appId;						//app主键
+	private String appName;						//app名称
+	private Developer developer;				//开发者
+	private Category category;					//类型
+	private String logo;						//logo地址
+	private String appInfo;						//app简介
+	private Dictionary platform;					//所属平台
+	private Dictionary examine;					//审核状态
+	private Dictionary status;						
+	private Admin checker;					//审核人员
+	private Date createDate;					//创建时间
+	private Date updatedaDate;					//修改时间
+	public Long getAppId() {
 		return appId;
 	}
-	public void setAppId(Integer appId) {
+	public void setAppId(Long appId) {
 		this.appId = appId;
 	}
 	public String getAppName() {
@@ -38,11 +39,17 @@ public class App implements Serializable {
 	public void setDeveloper(Developer developer) {
 		this.developer = developer;
 	}
-	public Version getCategory() {
+	public Category getCategory() {
 		return category;
 	}
-	public void setCategory(Version category) {
+	public void setCategory(Category category) {
 		this.category = category;
+	}
+	public String getLogo() {
+		return logo;
+	}
+	public void setLogo(String logo) {
+		this.logo = logo;
 	}
 	public String getAppInfo() {
 		return appInfo;
@@ -50,28 +57,28 @@ public class App implements Serializable {
 	public void setAppInfo(String appInfo) {
 		this.appInfo = appInfo;
 	}
-	public Integer getFlatform() {
-		return flatform;
+	public Dictionary getPlatform() {
+		return platform;
 	}
-	public void setFlatform(Integer flatform) {
-		this.flatform = flatform;
+	public void setPlatform(Dictionary platform) {
+		this.platform = platform;
 	}
-	public Integer getStatusId() {
-		return statusId;
+	public Dictionary getExamine() {
+		return examine;
 	}
-	public void setStatusId(Integer statusId) {
-		this.statusId = statusId;
+	public void setExamine(Dictionary examine) {
+		this.examine = examine;
 	}
-	public Integer getSaleId() {
-		return saleId;
+	public Dictionary getStatus() {
+		return status;
 	}
-	public void setSaleId(Integer saleId) {
-		this.saleId = saleId;
+	public void setStatus(Dictionary status) {
+		this.status = status;
 	}
-	public Integer getChecker() {
+	public Admin getChecker() {
 		return checker;
 	}
-	public void setChecker(Integer checker) {
+	public void setChecker(Admin checker) {
 		this.checker = checker;
 	}
 	public Date getCreateDate() {

@@ -9,20 +9,21 @@ import java.io.Serializable;
 import java.util.Date;
 public class Version implements Serializable {
 	private static final long serialVersionUID = 1L;
-	private Integer versionId;
-	private App app;
-	private String apkName;
-	private String supportRom;
-	private String softwareSize;
-	private String downliadLink;
-	private Integer statusId;
-	private Integer checker;
-	private Date createDate;
-	private Date updatedaDate;
-	public Integer getVersionId() {
+	private Long versionId;				//版本主键
+	private App app;						//appId
+	private String apkName;					//apk名称
+	private String supportRom;				//支持硬件
+	private Double softwareSize;			//软件大小
+	private String downloadLink;			//下载链接
+	private Dictionary examine;				//审核状态
+	private Dictionary status;				//app状态
+	private Admin checker;				//审核者
+	private Date createDate;				//添加时间
+	private Date updateDate;				//修改时间
+	public Long getVersionId() {
 		return versionId;
 	}
-	public void setVersionId(Integer versionId) {
+	public void setVersionId(Long versionId) {
 		this.versionId = versionId;
 	}
 	public App getApp() {
@@ -43,28 +44,34 @@ public class Version implements Serializable {
 	public void setSupportRom(String supportRom) {
 		this.supportRom = supportRom;
 	}
-	public String getSoftwareSize() {
+	public Double getSoftwareSize() {
 		return softwareSize;
 	}
-	public void setSoftwareSize(String softwareSize) {
+	public void setSoftwareSize(Double softwareSize) {
 		this.softwareSize = softwareSize;
 	}
-	public String getDownliadLink() {
-		return downliadLink;
+	public String getDownloadLink() {
+		return downloadLink;
 	}
-	public void setDownliadLink(String downliadLink) {
-		this.downliadLink = downliadLink;
+	public void setDownloadLink(String downloadLink) {
+		this.downloadLink = downloadLink;
 	}
-	public Integer getStatusId() {
-		return statusId;
+	public Dictionary getExamine() {
+		return examine;
 	}
-	public void setStatusId(Integer statusId) {
-		this.statusId = statusId;
+	public void setExamine(Dictionary examine) {
+		this.examine = examine;
 	}
-	public Integer getChecker() {
+	public Dictionary getStatus() {
+		return status;
+	}
+	public void setStatus(Dictionary status) {
+		this.status = status;
+	}
+	public Admin getChecker() {
 		return checker;
 	}
-	public void setChecker(Integer checker) {
+	public void setChecker(Admin checker) {
 		this.checker = checker;
 	}
 	public Date getCreateDate() {
@@ -73,11 +80,11 @@ public class Version implements Serializable {
 	public void setCreateDate(Date createDate) {
 		this.createDate = createDate;
 	}
-	public Date getUpdatedaDate() {
-		return updatedaDate;
+	public Date getUpdateDate() {
+		return updateDate;
 	}
-	public void setUpdatedaDate(Date updatedaDate) {
-		this.updatedaDate = updatedaDate;
+	public void setUpdateDate(Date updateDate) {
+		this.updateDate = updateDate;
 	}
 	
 }

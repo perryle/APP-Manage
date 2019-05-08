@@ -9,19 +9,19 @@ import java.util.Date;
  */
 public class Admin implements Serializable {
 	private static final long serialVersionUID = 1L;
-	private Integer adminId;
-	private String adminNo;
-	private String adminName;
-	private String password;
-	private Integer roleId;
-	private Integer createAdmin;
-	private Date createDate;
-	private Integer updateAdmin;
-	private Date updateDate;
-	public Integer getAdminId() {
+	private Long adminId;				//管理员主键
+	private String adminNo;					//管理员编号
+	private String adminName;				//管理员姓名
+	private String password;				//登录密码
+	private Role role;					//角色
+	private Admin createAdmin;			//创建人员
+	private Date createDate;				//创建时间
+	private Admin updateAdmin;			//修改人员
+	private Date updateDate;				//修改时间
+	public Long getAdminId() {
 		return adminId;
 	}
-	public void setAdminId(Integer adminId) {
+	public void setAdminId(Long adminId) {
 		this.adminId = adminId;
 	}
 	public String getAdminNo() {
@@ -42,16 +42,16 @@ public class Admin implements Serializable {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public Integer getRoleId() {
-		return roleId;
+	public Role getRole() {
+		return role;
 	}
-	public void setRoleId(Integer roleId) {
-		this.roleId = roleId;
+	public void setRole(Role role) {
+		this.role = role;
 	}
-	public Integer getCreateAdmin() {
+	public Admin getCreateAdmin() {
 		return createAdmin;
 	}
-	public void setCreateAdmin(Integer createAdmin) {
+	public void setCreateAdmin(Admin createAdmin) {
 		this.createAdmin = createAdmin;
 	}
 	public Date getCreateDate() {
@@ -60,10 +60,10 @@ public class Admin implements Serializable {
 	public void setCreateDate(Date createDate) {
 		this.createDate = createDate;
 	}
-	public Integer getUpdateAdmin() {
+	public Admin getUpdateAdmin() {
 		return updateAdmin;
 	}
-	public void setUpdateAdmin(Integer updateAdmin) {
+	public void setUpdateAdmin(Admin updateAdmin) {
 		this.updateAdmin = updateAdmin;
 	}
 	public Date getUpdateDate() {

@@ -9,19 +9,19 @@ import java.io.Serializable;
 import java.util.Date;
 public class Developer implements Serializable {
 	private static final long serialVersionUID = 1L;
-	private Integer devId;
-	private String devNo;
-	private String devName;
-	private String password;
-	private String cellphone;
-	private String email;
-	private String devInfo;
-	private Date createDate;
-	private Date updateDate;
-	public Integer getDevId() {
+	private Long devId;					//开发人员主键
+	private String devNo;					//开发人员编号
+	private String devName;					//开发人员姓名
+	private String password;				//登录密码
+	private String cellphone;				//联系电话
+	private String email;					//电子邮电
+	private String devInfo;					//简介
+	private Date createDate;				//创建时间
+	private Date updateDate;				//更新时间
+	public Long getDevId() {
 		return devId;
 	}
-	public void setDevId(Integer devId) {
+	public void setDevId(Long devId) {
 		this.devId = devId;
 	}
 	public String getDevNo() {

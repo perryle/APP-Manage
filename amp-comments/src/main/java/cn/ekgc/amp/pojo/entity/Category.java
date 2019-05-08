@@ -9,17 +9,17 @@ import java.io.Serializable;
 import java.util.Date;
 public class Category implements Serializable {
 	private static final long serialVersionUID = 1L;
-	private Integer categoryId;
-	private String categoryCode;
-	private String categoryName;
-	private String createAdmin;
-	private Date createDate;
-	private String updateAdmin;
-	private Date updateDate;
-	public Integer getCategoryId() {
+	private Long categoryId;					//类型主键
+	private String categoryCode;				//类型编号
+	private String categoryName;				//类型名称
+	private Admin createAdmin;					//创建人员
+	private Date createDate;					//创建时间
+	private Admin updateAdmin;					//修改人员
+	private Date updateDate;					//修改时间
+	public Long getCategoryId() {
 		return categoryId;
 	}
-	public void setCategoryId(Integer categoryId) {
+	public void setCategoryId(Long categoryId) {
 		this.categoryId = categoryId;
 	}
 	public String getCategoryCode() {
@@ -34,10 +34,10 @@ public class Category implements Serializable {
 	public void setCategoryName(String categoryName) {
 		this.categoryName = categoryName;
 	}
-	public String getCreateAdmin() {
+	public Admin getCreateAdmin() {
 		return createAdmin;
 	}
-	public void setCreateAdmin(String createAdmin) {
+	public void setCreateAdmin(Admin createAdmin) {
 		this.createAdmin = createAdmin;
 	}
 	public Date getCreateDate() {
@@ -46,10 +46,10 @@ public class Category implements Serializable {
 	public void setCreateDate(Date createDate) {
 		this.createDate = createDate;
 	}
-	public String getUpdateAdmin() {
+	public Admin getUpdateAdmin() {
 		return updateAdmin;
 	}
-	public void setUpdateAdmin(String updateAdmin) {
+	public void setUpdateAdmin(Admin updateAdmin) {
 		this.updateAdmin = updateAdmin;
 	}
 	public Date getUpdateDate() {
@@ -58,6 +58,5 @@ public class Category implements Serializable {
 	public void setUpdateDate(Date updateDate) {
 		this.updateDate = updateDate;
 	}
-	
 	
 }

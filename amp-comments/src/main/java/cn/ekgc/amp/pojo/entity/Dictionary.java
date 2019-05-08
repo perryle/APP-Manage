@@ -9,24 +9,24 @@ import java.io.Serializable;
 import java.util.Date;
 public class Dictionary implements Serializable {
 	private static final long serialVersionUID = 1L;
-	private Integer dictionaryId;
-	private Dictionary parentId;
-	private String dictionaryName;
-	private Integer createAdmin;
-	private Date createDate;
-	private Integer updateAdmin;
-	private Date updateDate;
-	public Integer getDictionaryId() {
+	private Long dictionaryId;				//字典主键
+	private Dictionary parent;				//上一级字典
+	private String dictionaryName;				//字典名称
+	private Admin createAdmin;				//创建人
+	private Date createDate;					//创建时间
+	private Admin updateAdmin;				//修改人
+	private Date updateDate;					//修改时间
+	public Long getDictionaryId() {
 		return dictionaryId;
 	}
-	public void setDictionaryId(Integer dictionaryId) {
+	public void setDictionaryId(Long dictionaryId) {
 		this.dictionaryId = dictionaryId;
 	}
-	public Dictionary getParentId() {
-		return parentId;
+	public Dictionary getParent() {
+		return parent;
 	}
-	public void setParentId(Dictionary parentId) {
-		this.parentId = parentId;
+	public void setParent(Dictionary parent) {
+		this.parent = parent;
 	}
 	public String getDictionaryName() {
 		return dictionaryName;
@@ -34,10 +34,10 @@ public class Dictionary implements Serializable {
 	public void setDictionaryName(String dictionaryName) {
 		this.dictionaryName = dictionaryName;
 	}
-	public Integer getCreateAdmin() {
+	public Admin getCreateAdmin() {
 		return createAdmin;
 	}
-	public void setCreateAdmin(Integer createAdmin) {
+	public void setCreateAdmin(Admin createAdmin) {
 		this.createAdmin = createAdmin;
 	}
 	public Date getCreateDate() {
@@ -46,10 +46,10 @@ public class Dictionary implements Serializable {
 	public void setCreateDate(Date createDate) {
 		this.createDate = createDate;
 	}
-	public Integer getUpdateAdmin() {
+	public Admin getUpdateAdmin() {
 		return updateAdmin;
 	}
-	public void setUpdateAdmin(Integer updateAdmin) {
+	public void setUpdateAdmin(Admin updateAdmin) {
 		this.updateAdmin = updateAdmin;
 	}
 	public Date getUpdateDate() {
